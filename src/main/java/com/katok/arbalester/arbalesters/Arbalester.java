@@ -117,6 +117,8 @@ public class Arbalester {
         Skeleton skeleton = spawn.getWorld().spawn(spawn, Skeleton.class);
         skeleton.customName(IConfigManager.colorComponent(getName() + " LvL." + level));
 
+        skeleton.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, Math.min(config.getInt("glowing.every-level-up"), config.getInt("glowing.max-timer")) * 20, 1));
+
         ItemStack crossBow = new ItemStack(Material.CROSSBOW);
 
         CrossbowMeta crossBowMeta = (CrossbowMeta) crossBow.getItemMeta();
