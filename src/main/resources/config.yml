@@ -1,0 +1,54 @@
+database:
+  ip: localhost:3306
+  database: ""
+  username: ""
+  password: ""
+
+general:
+  refocusing-cooldown: 5 # в секундах
+
+skelets:
+  default-skelet: # название должно быть не больше 16 символов
+    shoot-distance: 10 # на сколько далеко может стрелять скелет
+    shoot-cooldown: 0.2 # раз в сколько секунд будет стрелять скелет
+    position:
+      x: 100
+      y: 60
+      z: 100
+      world: "world"
+    boom:
+      every-level-up: 6 # на сколько процентов поднимать шанс взрыва стрелы каждый уровень
+      max-chance: 20
+      every-strength-level-up: 2 # на сколько процентов поднимать силу взрыва стрелы каждый уровень
+      max-strength: 10
+    glowing:
+      default-timer: 4 # в секундах
+      every-level-up: 6 # на сколько секунд поднимать время свечения при появлении каждый уровень
+      max-timer: 20
+    damage:
+      every-level-up: 2
+      max: 20
+    kill:
+      DEFAULT: # DEFAULT - что будет делается при убийстве моба любым предметом (то есть, если человек убил железным мечем, то ему и DEFAULT и IRON_SWORD защитает)
+        effects:
+          blindness:
+            lvl: 1
+            time: 30 # в секундах
+            chance: 30 # в процентах
+          # аттрибуты можно добавлять бесконечно
+        drop:
+          IRON_INGOT:
+            #при убийстве может выпасть от 0 до 3 железа с шансом 10%
+            min: 0
+            max: 3
+            chance: 10
+          BONE:
+            min: 5
+            max: 20
+            chance: 5
+      IRON_SWORD:
+        drop:
+          STICK:
+            min: 0
+            max: 7
+            chance: 25

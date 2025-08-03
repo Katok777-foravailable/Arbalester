@@ -1,0 +1,25 @@
+main: com.katok.arbalester.Arbalester
+name: Arbalester
+version: '1.0'
+author: Katok777
+api-version: 1.20
+
+# permissions:
+  # ivoxprotect.register:
+  #   default: true
+  # ivoxprotect.login:
+  #   default: true
+
+# commands:
+#   register:
+#     usage: /register
+#     aliases: reg
+#     permission: ivoxprotect.register
+#   login:
+#     usage: /login
+#     aliases: l
+#     permission: ivoxprotect.login
+
+libraries:
+  - "mysql:mysql-connector-java:8.0.25"
+  - "com.zaxxer:HikariCP:6.3.0"
